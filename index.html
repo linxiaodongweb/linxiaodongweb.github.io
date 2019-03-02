@@ -152,6 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JS设计模式-工厂模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/02/JS设计模式-工厂模式/">JS设计模式-工厂模式</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/02/JS设计模式-工厂模式/" class="archive-article-date">
+  	<time datetime="2019-03-02T02:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程</p>
+</blockquote>
+<p>#工厂模式介绍</p>
+<h5 id="什么时候用工厂模式，使用场景等？"><a href="#什么时候用工厂模式，使用场景等？" class="headerlink" title="什么时候用工厂模式，使用场景等？"></a>什么时候用工厂模式，使用场景等？</h5><ul>
+<li>将 new 操作单独封装</li>
+<li>遇到 new 时，就要考虑是否该使用工厂模式。</li>
+</ul>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><ul>
+<li>你去购买汉堡，直接点餐，取餐，不用自己亲手做。</li>
+<li>商店要 ”封装” 做汉堡的工作，做好直接给买者。</li>
+</ul>
+<h5 id="工厂模式UML类图如下"><a href="#工厂模式UML类图如下" class="headerlink" title="工厂模式UML类图如下"></a>工厂模式UML类图如下</h5><p><img src="/public/images/uml-factory.png" alt="工厂模式UML类图"><br>其中Creator是一个工厂，Product 是一个产品。<br>一个Creator工厂有一个create方法，返回一个产品，可以理解为最简单的工厂模式。</p>
+<p>#代码演示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class Product &#123;</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    init() &#123;</span><br><span class="line">        alert(&quot;init&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    fn1() &#123;</span><br><span class="line">        alert(&quot;fn1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    fn2() &#123;</span><br><span class="line">        alert(&quot;fn2&quot;);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">class Creator &#123;</span><br><span class="line">    create(name)&#123;</span><br><span class="line">        return new Product(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 测试</span><br><span class="line">let creator = new Creator();</span><br><span class="line">let p = creator.create(&quot;p1&quot;);</span><br><span class="line">p.init();</span><br><span class="line">p.fn1();</span><br><span class="line"></span><br><span class="line">// 结果 弹出 init  111</span><br></pre></td></tr></table></figure></p>
+<p><em>结论： 我们通过Creator类提供的create方法来创建Product， 通过Creator工厂已经把真正的构造函数封装起来了，我们用的时候只需要知道Creator工厂的create方法可以产生一个实例，而不用去关心生成的实例是谁。</em></p>
+<h5 id="常见场景"><a href="#常见场景" class="headerlink" title="常见场景"></a>常见场景</h5><ul>
+<li>Jquery - $(“div”)</li>
+<li>React.createElement</li>
+<li>Vue 异步组件</li>
+</ul>
+<ol>
+<li><p>Jquery工厂模式简单demo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Jquery &#123;</span><br><span class="line">    constructor(selector)&#123;</span><br><span class="line">        let slice = Array.prototype.slice;</span><br><span class="line">        let dom = slice.call(document.querySelectorAll(selector));</span><br><span class="line">        let len = dom ? dom.length : 0;</span><br><span class="line">        for(let i = 0; i &lt; len; i++) &#123;</span><br><span class="line">            this[i] = dom[i];</span><br><span class="line">        &#125;</span><br><span class="line">        this.length = len;</span><br><span class="line">        this.selector = selector || &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    append(node)&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    addClass(name)&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    html(data)&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">window.$ = function (selector) &#123;</span><br><span class="line">    return new Jquery(selector);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>React.createElement简单demo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class VNode (tag, attrs, children)  &#123; // 此处写法便于理解，语法错误请忽略</span><br><span class="line">   // 省略内部代码</span><br><span class="line">&#125;</span><br><span class="line">React.createElement = function (tag, attrs, children) &#123;</span><br><span class="line">    return new Vnode(tag, attrs, children);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/02/JS设计模式-工厂模式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS设计模式-单列模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,77 +275,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/03/02/JS设计模式-单列模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/02/hello-world/" class="archive-article-date">
-  	<time datetime="2019-03-02T01:36:39.451Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/02/hello-world/">展开全文 >></a>
         </p>
       
 
