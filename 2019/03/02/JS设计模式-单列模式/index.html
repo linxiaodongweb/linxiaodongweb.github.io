@@ -15,9 +15,9 @@
 <meta property="og:url" content="http://yoursite.com/2019/03/02/JS设计模式-单列模式/index.html">
 <meta property="og:site_name" content="林小东的个人微博">
 <meta property="og:description" content="#单例模式介绍 什么是单例设计模式 系统中被唯一使用 一个类中只有一个实例 属于三大设计类型中的创建型模式">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://linxiaodongweb.github.io/images/uml-singleobject.jpeg">
-<meta property="og:updated_time" content="2019-03-03T10:32:54.309Z">
+<meta property="og:updated_time" content="2019-03-03T11:41:48.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS设计模式-单列模式">
 <meta name="twitter:description" content="#单例模式介绍 什么是单例设计模式 系统中被唯一使用 一个类中只有一个实例 属于三大设计类型中的创建型模式">
@@ -55,6 +55,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">林小东</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">林小东的个人微博</p>
 		
 
 		<nav class="header-menu">
@@ -113,6 +115,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">林小东</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>林小东的个人微博<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -347,24 +351,33 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2019/03/02/JS设计模式-单列模式/",
-  owner: 'linxiaodongweb',
-  repo: 'linxiaodongweb.github.io',
-  oauth: {
-    client_id: 'a46fc2fce49a101aab36',
-    client_secret: '798f8d88203119b7d30b8e8ca9d436459fdb969e',
-  },
-})
-gitment.render('gitment-ctn')
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rNsRWYcIGxckKmmPknA380dN-gzGzoHsz",
+            app_key: "W1LqkNXMW9xoD4pf03j0rEva",
+            placeholder: "ヾﾉ≧∀≦)d输入评论内容!",
+            avatar:""
+        });
+    }
 </script>
+    </section>
   
-
-
           </div>
         </div>
       </div>

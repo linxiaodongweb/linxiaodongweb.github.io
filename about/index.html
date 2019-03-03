@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript | 林小东的个人微博</title>
+  <title>关于 | 林小东的个人微博</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JavaScript">
-<meta property="og:url" content="http://yoursite.com/JavaScript/index.html">
+  <meta name="description" content="林小东的个人微博">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="林小东的个人微博">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-03T06:47:22.284Z">
+<meta property="og:description" content="林小东的个人微博">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-03T11:38:27.256Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript">
+<meta name="twitter:title" content="关于">
+<meta name="twitter:description" content="林小东的个人微博">
   
     <link rel="alternative" href="/atom.xml" title="林小东的个人微博" type="application/atom+xml">
   
@@ -49,6 +52,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">林小东</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">林小东的个人微博</p>
 		
 
 		<nav class="header-menu">
@@ -108,6 +113,8 @@
 			  <h1 class="header-author js-header-author">林小东</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>林小东的个人微博<i class="icon icon-quo-right"></i></p>
+			
 			
 			
 				
@@ -158,13 +165,13 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript
+      关于
     </h1>
   
 
         
-        <a href="/JavaScript/index.html" class="archive-article-date">
-  	<time datetime="2019-03-03T06:47:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-03</time>
+        <a href="/about/index.html" class="archive-article-date">
+  	<time datetime="2019-03-03T11:37:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-03</time>
 </a>
         
       </header>
@@ -250,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/JavaScript/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/about/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,24 +297,33 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/JavaScript/index.html",
-  owner: 'linxiaodongweb',
-  repo: 'linxiaodongweb.github.io',
-  oauth: {
-    client_id: 'a46fc2fce49a101aab36',
-    client_secret: '798f8d88203119b7d30b8e8ca9d436459fdb969e',
-  },
-})
-gitment.render('gitment-ctn')
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rNsRWYcIGxckKmmPknA380dN-gzGzoHsz",
+            app_key: "W1LqkNXMW9xoD4pf03j0rEva",
+            placeholder: "ヾﾉ≧∀≦)d输入评论内容!",
+            avatar:""
+        });
+    }
 </script>
+    </section>
   
-
-
           </div>
         </div>
       </div>
