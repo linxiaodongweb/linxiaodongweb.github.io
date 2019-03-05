@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-03T12:59:04.397Z</updated>
+  <updated>2019-03-05T15:19:30.620Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS设计模式-适配器模式</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/05/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/05/JS设计模式-适配器模式/</id>
+    <published>2019-03-05T14:44:43.000Z</published>
+    <updated>2019-03-05T15:19:30.620Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;旧接口模式和使用者不兼容&lt;/li&gt;
+&lt;li&gt;中间加一个适配器转接口&lt;br&gt;比如你去香港或者出国去一些国家，他们的插排接口和我们都不一样，我要充电不能直接用，这个时候就需要一个适配器来转换一下电压。
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JS设计模式-工厂模式</title>
