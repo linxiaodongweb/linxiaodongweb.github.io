@@ -17,7 +17,7 @@
 <meta property="og:description" content="什么是单例设计模式 系统中被唯一使用 一个类中只有一个实例 属于三大设计类型中的创建型模式">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.linxiaodongblog.com/images/uml-singleobject.jpeg">
-<meta property="og:updated_time" content="2019-03-05T15:26:31.959Z">
+<meta property="og:updated_time" content="2019-03-05T15:27:47.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS设计模式-单列模式">
 <meta name="twitter:description" content="什么是单例设计模式 系统中被唯一使用 一个类中只有一个实例 属于三大设计类型中的创建型模式">
@@ -211,9 +211,9 @@
 <h5 id="UML-类图"><a href="#UML-类图" class="headerlink" title="UML 类图"></a>UML 类图</h5><p><img src="/images/uml-singleobject.jpeg" width="400" height="490"></p>
 <h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><ul>
 <li>登录框</li>
-<li>购物车</li>
-</ul>
-<h5 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h5><ul>
+<li><p>购物车</p>
+<p>说明</p>
+</li>
 <li>单例模式需要用到Java的特性 (private)</li>
 <li>ES6中没有（ typeScript除外）</li>
 <li>只能用Java代码来演示 UML 图中的内容 （不要担心，JS中也会变相的实现单例模式）<br>Java代码演示 (Java代码是最容易理解的编程语言之一）<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">SingleObject</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 注意，私有化构造函数，外部不能 new,  只能内部 new！！！！</span></span><br><span class="line">     private SingleObejct()&#123;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 唯一被 new 出来的对象</span></span><br><span class="line">     private SingleObject instance = <span class="literal">null</span>;</span><br><span class="line">     <span class="comment">// 获取对象的唯一接口</span></span><br><span class="line">     public <span class="keyword">static</span> SingleObject getInstance() &#123;</span><br><span class="line">           <span class="keyword">if</span>(instance == <span class="literal">null</span>)&#123;</span><br><span class="line">                 <span class="comment">// 只 new一次</span></span><br><span class="line">                 instance = <span class="keyword">new</span> SingleObject();</span><br><span class="line">           &#125; </span><br><span class="line">           <span class="keyword">return</span> instance;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 对象方法</span></span><br><span class="line">     public <span class="keyword">void</span> login(username, password) &#123;</span><br><span class="line">            System.out.println(<span class="string">"login..."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -369,7 +369,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是单例设计模式"><span class="toc-number">1.</span> <span class="toc-text">什么是单例设计模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML-类图"><span class="toc-number">2.</span> <span class="toc-text">UML 类图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#说明"><span class="toc-number">4.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JS中使用单例模式"><span class="toc-number">5.</span> <span class="toc-text">JS中使用单例模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#场景"><span class="toc-number">6.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证-（五大设计原则SOLID）"><span class="toc-number">7.</span> <span class="toc-text">设计原则验证 （五大设计原则SOLID）</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是单例设计模式"><span class="toc-number">1.</span> <span class="toc-text">什么是单例设计模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML-类图"><span class="toc-number">2.</span> <span class="toc-text">UML 类图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JS中使用单例模式"><span class="toc-number">4.</span> <span class="toc-text">JS中使用单例模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#场景"><span class="toc-number">5.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证-（五大设计原则SOLID）"><span class="toc-number">6.</span> <span class="toc-text">设计原则验证 （五大设计原则SOLID）</span></a></li></ol>
                     </div>
                 </span>
             </div>
