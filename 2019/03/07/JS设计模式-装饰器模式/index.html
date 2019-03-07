@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.linxiaodongblog.com">
-  <title>Archives: 2019/3 | 林小东的个人博客</title>
+  <title>JS设计模式-装饰器模式 | 林小东的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术与生活的学习，分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="林小东的个人博客">
-<meta property="og:url" content="http://www.linxiaodongblog.com/archives/2019/03/index.html">
+  <meta name="description" content="介绍 为对象添加新功能 不改变其原有的结构和功能和适配器模式不一样，适配器模式是原有的不能用了，而装饰器模式是原来的还能用，不过给增加一些功能。比如： 手机壳，用来给手机美观，保护，防滑等等">
+<meta name="keywords" content="JavaScript,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS设计模式-装饰器模式">
+<meta property="og:url" content="http://www.linxiaodongblog.com/2019/03/07/JS设计模式-装饰器模式/index.html">
 <meta property="og:site_name" content="林小东的个人博客">
-<meta property="og:description" content="技术与生活的学习，分享。">
+<meta property="og:description" content="介绍 为对象添加新功能 不改变其原有的结构和功能和适配器模式不一样，适配器模式是原有的不能用了，而装饰器模式是原来的还能用，不过给增加一些功能。比如： 手机壳，用来给手机美观，保护，防滑等等">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-f22bb51e19571f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-48d0739e659f1151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-07T16:39:41.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="林小东的个人博客">
-<meta name="twitter:description" content="技术与生活的学习，分享。">
+<meta name="twitter:title" content="JS设计模式-装饰器模式">
+<meta name="twitter:description" content="介绍 为对象添加新功能 不改变其原有的结构和功能和适配器模式不一样，适配器模式是原有的不能用了，而装饰器模式是原来的还能用，不过给增加一些功能。比如： 手机壳，用来给手机美观，保护，防滑等等">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8878633-f22bb51e19571f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="林小东的个人博客" type="application/atom+xml">
   
@@ -177,36 +182,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JS设计模式-装饰器模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS设计模式-装饰器模式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/JS设计模式-装饰器模式/" class="archive-article-date">
+
+        
+        <a href="/2019/03/07/JS设计模式-装饰器模式/" class="archive-article-date">
   	<time datetime="2019-03-07T15:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/JS设计模式-装饰器模式/">JS设计模式-装饰器模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><ul>
+<li>为对象添加新功能</li>
+<li>不改变其原有的结构和功能<br>和适配器模式不一样，适配器模式是原有的不能用了，而装饰器模式是原来的还能用，不过给增加一些功能。<br>比如： 手机壳，用来给手机美观，保护，防滑等等<a id="more"></a>
+<h5 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h5><img src="https://upload-images.jianshu.io/upload_images/8878633-f22bb51e19571f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="装饰器UML类图"></li>
+</ul>
+<h5 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">    draw() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"画一个圆形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Decorator</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(circle)&#123;</span><br><span class="line">        <span class="keyword">this</span>.circle = circle;</span><br><span class="line">    &#125;</span><br><span class="line">    draw() &#123;</span><br><span class="line">        <span class="keyword">this</span>.circle.draw();</span><br><span class="line">        <span class="keyword">this</span>.setRedBorder(<span class="keyword">this</span>.circle);</span><br><span class="line">    &#125;</span><br><span class="line">    setRedBorder(circle) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"设置红色边框"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> circle = <span class="keyword">new</span> Circle();</span><br><span class="line">circle.draw()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> dec = <span class="keyword">new</span> Decorator(circle);</span><br><span class="line">dec.setRedBorder();</span><br></pre></td></tr></table></figure>
+<h5 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h5><ul>
+<li>ES7装饰器-babel可转换</li>
+<li>core-decorators等第三方库常用装饰器<br>ES7装饰器<h5 id="装饰类"><a href="#装饰类" class="headerlink" title="装饰类"></a>装饰类</h5>一个简单的demo<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一个简单的demo</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testDec</span>(<span class="params">target</span>) </span>&#123;</span><br><span class="line">    target.isDec = <span class="string">"林海"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@testDec</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">alert(Demo.isDec)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>装饰类的原理<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 装饰器的原理</span></span><br><span class="line">@decorator</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;&#125;</span><br><span class="line">A = decorator(A) || A;</span><br></pre></td></tr></table></figure></p>
+<p>可以加参数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testDec</span>(<span class="params">isDec</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">target</span>)</span>&#123;</span><br><span class="line">        target.isDec = isDec;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@testDec(<span class="literal">true</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">alert(Demo.isDec)</span><br></pre></td></tr></table></figure></p>
+<p>我们来做一个常用的mixins混合装饰器，来把一个类里面属性和方法全部添加到另一个类上<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mixins</span>(<span class="params">...list</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">target</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">Object</span>.assign(target.prototype, ...list)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> Foo = &#123;</span><br><span class="line">    foo() &#123; alert(<span class="string">'foo'</span>) &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  @mixins(Foo)</span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;&#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">  obj.foo() <span class="comment">// 'foo'</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="装饰方法"><a href="#装饰方法" class="headerlink" title="装饰方法"></a>装饰方法</h5><p>让某个方法只读，不能修改<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">readonly</span>(<span class="params">target, name, descriptor</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// descriptor属性描述对象 （Object.defineProperty 会用到)</span></span><br><span class="line">    <span class="comment">// descriptor对象原来的值如下</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    <span class="comment">//   value: specifiedFunction,</span></span><br><span class="line">    <span class="comment">//   enumerable: false,</span></span><br><span class="line">    <span class="comment">//   configurable: true,</span></span><br><span class="line">    <span class="comment">//   writable: true</span></span><br><span class="line">    <span class="comment">// &#125;;</span></span><br><span class="line">    descriptor.writable = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> descriptor;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">      <span class="keyword">constructor</span>() &#123;</span><br><span class="line">          <span class="keyword">this</span>.first = <span class="string">'A'</span></span><br><span class="line">          <span class="keyword">this</span>.last = <span class="string">'B'</span></span><br><span class="line">      &#125;</span><br><span class="line">  </span><br><span class="line">      @readonly</span><br><span class="line">      testname() &#123; <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.first&#125;</span> <span class="subst">$&#123;<span class="keyword">this</span>.last&#125;</span>`</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> p = <span class="keyword">new</span> Person()</span><br><span class="line">  <span class="built_in">console</span>.log(p.testname())</span><br><span class="line">  p.testname = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125; <span class="comment">// 这里会报错，因为 name 是只读属性</span></span><br></pre></td></tr></table></figure></p>
+<p>一个打印日志装饰器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">target, name, descriptor</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oldValue = descriptor.value;</span><br><span class="line">    <span class="comment">// name 是修饰的方法名字</span></span><br><span class="line">    descriptor.value = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`Calling <span class="subst">$&#123;name&#125;</span> with`</span>, <span class="built_in">arguments</span>);</span><br><span class="line">      <span class="keyword">return</span> oldValue.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> descriptor;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Math</span> </span>&#123;</span><br><span class="line">    @log</span><br><span class="line">    add(a, b) &#123;</span><br><span class="line">      <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> math = <span class="keyword">new</span> <span class="built_in">Math</span>();</span><br><span class="line">  <span class="keyword">const</span> result = math.add(<span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'result'</span>, result);</span><br></pre></td></tr></table></figure></p>
+<p>装饰类的时候，一般主要是看target（装饰对象）第一个参数。<br>装饰方法的时候，一般主要看的是descriptor（描述）第三个参数。</p>
+<h5 id="core-decorators"><a href="#core-decorators" class="headerlink" title="core-decorators"></a>core-decorators</h5><ul>
+<li>第三方开源 lib</li>
+<li>提供常用的装饰器,比如readonly只读状态,autobind绑定this等</li>
+<li>查阅文档： <a href="https://github.com/jayphelps/core-decorators" target="_blank" rel="noopener">https://github.com/jayphelps/core-decorators</a></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 首先安装</span></span><br><span class="line">npm install core-decorators --save</span><br></pre></td></tr></table></figure>
+<p>这里我们使用 core-decorators提供的deprecate(对装饰的方法在浏览器中提示已经废弃）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; deprecate &#125; <span class="keyword">from</span> <span class="string">'core-decorators'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  @deprecate</span><br><span class="line">  facepalm() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  @deprecate(<span class="string">'We stopped facepalming'</span>)</span><br><span class="line">  facepalmHard() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  @deprecate(<span class="string">'We stopped facepalming'</span>, &#123; <span class="attr">url</span>: <span class="string">'http://knowyourmeme.com/memes/facepalm'</span> &#125;)</span><br><span class="line">  facepalmHarder() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line">person.facepalm();</span><br><span class="line"><span class="comment">// DEPRECATION Person#facepalm: This function will be removed in future versions.</span></span><br><span class="line"></span><br><span class="line">person.facepalmHard();</span><br><span class="line"><span class="comment">// DEPRECATION Person#facepalmHard: We stopped facepalming</span></span><br><span class="line"></span><br><span class="line">person.facepalmHarder();</span><br><span class="line"><span class="comment">// DEPRECATION Person#facepalmHarder: We stopped facepalming</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//     See http://knowyourmeme.com/memes/facepalm for more details.</span></span><br></pre></td></tr></table></figure>
+<p>运行结果如下图：<br><img src="https://upload-images.jianshu.io/upload_images/8878633-48d0739e659f1151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行结果"></p>
+<h5 id="设计原则验证"><a href="#设计原则验证" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><ul>
+<li>将现有对象和装饰器进行分离，两者独立存在</li>
+<li>符合开放封闭原则<h5 id="对装饰器更多学习，可以看-阮一峰es6装饰器教程"><a href="#对装饰器更多学习，可以看-阮一峰es6装饰器教程" class="headerlink" title="对装饰器更多学习，可以看 阮一峰es6装饰器教程"></a>对装饰器更多学习，可以看 <a href="http://es6.ruanyifeng.com/#docs/decorator" target="_blank" rel="noopener">阮一峰es6装饰器教程</a></h5></li>
+</ul>
+<blockquote>
+<p>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程</p>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,147 +284,146 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.linxiaodongblog.com/2019/03/07/JS设计模式-装饰器模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/05/JS设计模式-适配器模式/" class="archive-article-date">
-  	<time datetime="2019-03-05T14:44:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/05/JS设计模式-适配器模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS设计模式-适配器模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/05/JS设计模式-适配器模式/">JS设计模式-适配器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML类图"><span class="toc-number">2.</span> <span class="toc-text">UML类图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#代码演示"><span class="toc-number">3.</span> <span class="toc-text">代码演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#场景"><span class="toc-number">4.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#装饰类"><span class="toc-number">5.</span> <span class="toc-text">装饰类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#装饰方法"><span class="toc-number">6.</span> <span class="toc-text">装饰方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#core-decorators"><span class="toc-number">7.</span> <span class="toc-text">core-decorators</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证"><span class="toc-number">8.</span> <span class="toc-text">设计原则验证</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#对装饰器更多学习，可以看-阮一峰es6装饰器教程"><span class="toc-number">9.</span> <span class="toc-text">对装饰器更多学习，可以看 阮一峰es6装饰器教程</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/JS设计模式-工厂模式/" class="archive-article-date">
-  	<time datetime="2019-03-02T02:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/JS设计模式-工厂模式/">JS设计模式-工厂模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/JS设计模式-单列模式/" class="archive-article-date">
-  	<time datetime="2019-03-02T01:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/JS设计模式-单列模式/">JS设计模式-单列模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+        
+    </div>
+</aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rNsRWYcIGxckKmmPknA380dN-gzGzoHsz",
+            app_key: "W1LqkNXMW9xoD4pf03j0rEva",
+            placeholder: "ヾﾉ≧∀≦)d输入评论内容!",
+            avatar:""
+        });
+    }
+</script>
+    </section>
+  
           </div>
         </div>
       </div>
@@ -383,8 +444,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
