@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-12T15:09:28.723Z</updated>
+  <updated>2019-03-12T15:11:01.510Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -17,22 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS设计模式-观察者模式</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/12/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/12/JS设计模式-观察者模式/</id>
+    <published>2019-03-12T15:11:01.000Z</published>
+    <updated>2019-03-12T15:11:01.510Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JS设计模式-外观模式</title>
     <link href="http://www.linxiaodongblog.com/2019/03/12/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/12/JS设计模式-外观模式/</id>
     <published>2019-03-12T14:56:10.000Z</published>
-    <updated>2019-03-12T15:09:28.723Z</updated>
+    <updated>2019-03-12T15:15:31.873Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h5 id=&quot;什么是外观模式&quot;&gt;&lt;a href=&quot;#什么是外观模式&quot; class=&quot;headerlink&quot; title=&quot;什么是外观模式&quot;&gt;&lt;/a&gt;什么是外观模式&lt;/h5&gt;&lt;blockquote&gt;
-&lt;p&gt;本段内容来自于 &lt;a
-        
-      
+      &lt;h5 id=&quot;什么是外观模式&quot;&gt;&lt;a href=&quot;#什么是外观模式&quot; class=&quot;headerlink&quot; title=&quot;什么是外观模式&quot;&gt;&lt;/a&gt;什么是外观模式&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;本段内容来自于 &lt;a href=&quot;https://www.cnblogs.com/adamjwh/p/9048594.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JAdam博客&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  有些人可能炒过股票，但其实大部分人都不太懂，这种没有足够了解证券知识的情况下做股票是很容易亏钱的，刚开始炒股肯定都会想，如果有个懂行的帮帮手就好，其实基金就是个好帮手，支付宝里就有许多的基金，它将投资者分散的资金集中起来，交由专业的经理人进行管理，投资于股票、债券、外汇等领域，而基金投资的收益归持有者所有，管理机构收取一定比例的托管管理费用。&lt;/p&gt;
     
     </summary>
     
