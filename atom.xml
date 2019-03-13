@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-12T15:11:01.510Z</updated>
+  <updated>2019-03-13T16:22:33.633Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -21,12 +21,21 @@
     <link href="http://www.linxiaodongblog.com/2019/03/12/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/12/JS设计模式-观察者模式/</id>
     <published>2019-03-12T15:11:01.000Z</published>
-    <updated>2019-03-12T15:11:01.510Z</updated>
+    <updated>2019-03-13T16:22:33.633Z</updated>
     
     <summary type="html">
     
+      &lt;p&gt;观察者模式是前端设计模式的核心&lt;/p&gt;
+&lt;h5 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;发布 &amp;amp; 订阅&lt;/li&gt;
+&lt;li&gt;一对多&lt;br&gt;什么是发布 &amp;amp; 订阅？
+    
     </summary>
     
+    
+      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
+    
+      <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
