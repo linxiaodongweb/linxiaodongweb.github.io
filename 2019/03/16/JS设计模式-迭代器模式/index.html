@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.linxiaodongblog.com">
-  <title>Archives: 2019 | 林小东的个人博客</title>
+  <title>JS设计模式-迭代器模式 | 林小东的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术与生活的学习，分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="林小东的个人博客">
-<meta property="og:url" content="http://www.linxiaodongblog.com/archives/2019/index.html">
+  <meta name="description" content="介绍 顺序访问一个集合 使用者无需知道集合的内部结构（封装）迭代器模式通常都是对一个数组，集合等进行访问，迭代器的设计是为了封装一个方法，可以对多种数据类型进行访问。">
+<meta name="keywords" content="JavaScript,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS设计模式-迭代器模式">
+<meta property="og:url" content="http://www.linxiaodongblog.com/2019/03/16/JS设计模式-迭代器模式/index.html">
 <meta property="og:site_name" content="林小东的个人博客">
-<meta property="og:description" content="技术与生活的学习，分享。">
+<meta property="og:description" content="介绍 顺序访问一个集合 使用者无需知道集合的内部结构（封装）迭代器模式通常都是对一个数组，集合等进行访问，迭代器的设计是为了封装一个方法，可以对多种数据类型进行访问。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-8c6d2ad0f21056f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-4ebec7c307b45b11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-16T07:37:52.840Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="林小东的个人博客">
-<meta name="twitter:description" content="技术与生活的学习，分享。">
+<meta name="twitter:title" content="JS设计模式-迭代器模式">
+<meta name="twitter:description" content="介绍 顺序访问一个集合 使用者无需知道集合的内部结构（封装）迭代器模式通常都是对一个数组，集合等进行访问，迭代器的设计是为了封装一个方法，可以对多种数据类型进行访问。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8878633-8c6d2ad0f21056f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="林小东的个人博客" type="application/atom+xml">
   
@@ -177,36 +182,100 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JS设计模式-迭代器模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS设计模式-迭代器模式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/JS设计模式-迭代器模式/" class="archive-article-date">
+
+        
+        <a href="/2019/03/16/JS设计模式-迭代器模式/" class="archive-article-date">
   	<time datetime="2019-03-16T06:27:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/JS设计模式-迭代器模式/">JS设计模式-迭代器模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><ul>
+<li>顺序访问一个集合</li>
+<li>使用者无需知道集合的内部结构（封装）<br>迭代器模式通常都是对一个数组，集合等进行访问，迭代器的设计是为了封装一个方法，可以对多种数据类型进行访问。<a id="more"></a>
+<h5 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>jquery each<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>jquery each<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>jquery each<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.3.1/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> nodeList = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'p'</span>)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> $p = $(<span class="string">'p'</span>)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 要对这三个变量进行遍历，需要写三个遍历方法</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 第一</span></span></span><br><span class="line"><span class="javascript">        arr.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(item)</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 第二</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> i, length = nodeList.length</span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(nodeList[i])</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 第三</span></span></span><br><span class="line"><span class="javascript">        $p.each(<span class="function"><span class="keyword">function</span> (<span class="params">key, p</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(key, p)</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 如何能写出一个方法来遍历这三个对象呢</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> $data = $(data)</span></span><br><span class="line"><span class="javascript">            $data.each(<span class="function"><span class="keyword">function</span> (<span class="params">key, p</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(key, p)</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        each(arr)</span></span><br><span class="line"><span class="undefined">        each(nodeList)</span></span><br><span class="line"><span class="undefined">        each($p)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h5><p><img src="https://upload-images.jianshu.io/upload_images/8878633-8c6d2ad0f21056f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="uml_iterator.png"></p>
+<h5 id="UML类图代码演示"><a href="#UML类图代码演示" class="headerlink" title="UML类图代码演示"></a>UML类图代码演示</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Iterator</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(conatiner) &#123;</span><br><span class="line">        <span class="keyword">this</span>.list = conatiner.list</span><br><span class="line">        <span class="keyword">this</span>.index = <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    next() &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.hasNext()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.list[<span class="keyword">this</span>.index++]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">    hasNext() &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.index &gt;= <span class="keyword">this</span>.list.length) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Container</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(list) &#123;</span><br><span class="line">        <span class="keyword">this</span>.list = list</span><br><span class="line">    &#125;</span><br><span class="line">    getIterator() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Iterator(<span class="keyword">this</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> container = <span class="keyword">new</span> Container([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line"><span class="keyword">let</span> iterator = container.getIterator()</span><br><span class="line"><span class="keyword">while</span>(iterator.hasNext()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h5><ul>
+<li>jQuery each</li>
+<li>ES6 Iterator<h6 id="jQuery-each"><a href="#jQuery-each" class="headerlink" title="jQuery each"></a>jQuery each</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> $data = $(data)</span><br><span class="line">       $data.each(<span class="function"><span class="keyword">function</span> (<span class="params">key, p</span>) </span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(key, p)</span><br><span class="line">       &#125;)</span><br><span class="line">   &#125;</span><br><span class="line">   each(arr)</span><br><span class="line">   each(nodeList)</span><br><span class="line">   each($p)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h6 id="ES6-Iterator"><a href="#ES6-Iterator" class="headerlink" title="ES6 Iterator"></a>ES6 Iterator</h6><p>ES6 Iterator为何存在？</p>
+<ul>
+<li>ES6语法中，有序集合的数据类型已经有很多</li>
+<li>Array Map Set String TypedArray arguments NodeList Generator(慢慢被ES7 async await替代）</li>
+<li>需要有一个统一的遍历接口来遍历多有数据类型</li>
+<li>（注意，object不是有序集合，可以用Map来代替)</li>
+</ul>
+<p>ES6 Iterator是什么？</p>
+<ul>
+<li>以上数据类型，都有[Sysbol.iterator]属性</li>
+<li>属性值是函数，执行函数返回一个迭代器</li>
+<li>for…of的出现</li>
+</ul>
+<p>具体教程可以看<a href="http://es6.ruanyifeng.com/#docs/iterator" target="_blank" rel="noopener">阮一峰ES6</a><br>ES6 迭代器演示<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> nodeList = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'p'</span>)</span><br><span class="line"><span class="keyword">let</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">m.set(<span class="string">'a'</span>, <span class="number">100</span>)</span><br><span class="line">m.set(<span class="string">'b'</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">     生成遍历器</span><br><span class="line">    <span class="keyword">let</span> iterator = data[<span class="built_in">Symbol</span>.iterator]()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next())  <span class="comment">// 有数据时返回 &#123;value: 1, done: false&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next())</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next())</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next())</span><br><span class="line">    <span class="built_in">console</span>.log(iterator.next())  <span class="comment">// 没有数据时返回 &#123;value: undefined, done: true&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> item = &#123;<span class="attr">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">    <span class="keyword">while</span> (!item.done) &#123;</span><br><span class="line">        item = iterator.next()</span><br><span class="line">        <span class="keyword">if</span> (!item.done) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(item.value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">each(arr)</span><br><span class="line">each(nodeList)</span><br><span class="line">each(m)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果<br><img src="https://upload-images.jianshu.io/upload_images/8878633-4ebec7c307b45b11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><code>`</code>javascript<br>// Symbol.iterator 并不是人人都知道<br>// 也不是每个人都需要封装一个each方法<br>// 因此有了 <code>for...of</code>语法<br>// data需要包含Symbol.iterator这个属性才可以<br>function each(data) {<br>    for (let item of data) {<br>        console.log(item)<br>    }<br>}</p>
+<p>each(arr)<br>each(nodeList)<br>each(m)<br><code></code></p>
+<h5 id="设计原则验证"><a href="#设计原则验证" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><ul>
+<li>迭代器对象和目标对象分离</li>
+<li>迭代器将使用者与目标对象隔离开</li>
+<li>符合开放封闭原则</li>
+</ul>
+<blockquote>
+<ol>
+<li>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程。</li>
+</ol>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,315 +291,146 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.linxiaodongblog.com/2019/03/16/JS设计模式-迭代器模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/JS设计模式-观察者模式/" class="archive-article-date">
-  	<time datetime="2019-03-12T15:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/12/JS设计模式-观察者模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS设计模式-观察者模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/JS设计模式-观察者模式/">JS设计模式-观察者模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#代码说明"><span class="toc-number">2.</span> <span class="toc-text">代码说明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML类图"><span class="toc-number">3.</span> <span class="toc-text">UML类图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML类图代码演示"><span class="toc-number">4.</span> <span class="toc-text">UML类图代码演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#场景"><span class="toc-number">5.</span> <span class="toc-text">场景</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#jQuery-each"><span class="toc-number">5.1.</span> <span class="toc-text">jQuery each</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#ES6-Iterator"><span class="toc-number">5.2.</span> <span class="toc-text">ES6 Iterator</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证"><span class="toc-number">6.</span> <span class="toc-text">设计原则验证</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/JS设计模式-外观模式/" class="archive-article-date">
-  	<time datetime="2019-03-12T14:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/JS设计模式-外观模式/">JS设计模式-外观模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/JS设计模式-代理模式/" class="archive-article-date">
-  	<time datetime="2019-03-09T13:40:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/JS设计模式-代理模式/">JS设计模式-代理模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/JS设计模式-装饰器模式/" class="archive-article-date">
-  	<time datetime="2019-03-07T15:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/JS设计模式-装饰器模式/">JS设计模式-装饰器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/05/JS设计模式-适配器模式/" class="archive-article-date">
-  	<time datetime="2019-03-05T14:44:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/05/JS设计模式-适配器模式/">JS设计模式-适配器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/JS设计模式-工厂模式/" class="archive-article-date">
-  	<time datetime="2019-03-02T02:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/JS设计模式-工厂模式/">JS设计模式-工厂模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/JS设计模式-单列模式/" class="archive-article-date">
-  	<time datetime="2019-03-02T01:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/JS设计模式-单列模式/">JS设计模式-单列模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+        
+    </div>
+</aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rNsRWYcIGxckKmmPknA380dN-gzGzoHsz",
+            app_key: "W1LqkNXMW9xoD4pf03j0rEva",
+            placeholder: "ヾﾉ≧∀≦)d输入评论内容!",
+            avatar:""
+        });
+    }
+</script>
+    </section>
+  
           </div>
         </div>
       </div>
@@ -551,8 +451,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
