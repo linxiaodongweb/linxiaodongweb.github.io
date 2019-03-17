@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-16T07:37:52.840Z</updated>
+  <updated>2019-03-17T14:55:08.208Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS设计模式-状态模式</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/17/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/17/JS设计模式-状态模式/</id>
+    <published>2019-03-17T13:54:59.000Z</published>
+    <updated>2019-03-17T14:55:08.208Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;一个对象有状态变化&lt;/li&gt;
+&lt;li&gt;每次状态变化都会触发一个逻辑&lt;/li&gt;
+&lt;li&gt;不能总是使用if…else来控制&lt;br&gt;eg: 红绿灯  收藏/未收藏&lt;br&gt;核心： 状态和主体分离
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JS设计模式-迭代器模式</title>
@@ -66,7 +85,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/12/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/12/JS设计模式-外观模式/</id>
     <published>2019-03-12T14:56:10.000Z</published>
-    <updated>2019-03-12T15:15:31.873Z</updated>
+    <updated>2019-03-13T08:22:43.690Z</updated>
     
     <summary type="html">
     
