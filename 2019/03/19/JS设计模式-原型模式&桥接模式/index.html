@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.linxiaodongblog.com">
-  <title>Tag: JavaScript | 林小东的个人博客</title>
+  <title>JS设计模式-原型模式&amp;桥接模式 | 林小东的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术与生活的学习，分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="林小东的个人博客">
-<meta property="og:url" content="http://www.linxiaodongblog.com/tags/JavaScript/index.html">
+  <meta name="description" content="本章内容介绍前端不常用的设计模式有哪些设计模式？  创建性模式原型模式 结构型模式桥接模式  组合模式  享元模式 行为型模式策略模式 模板方法模式 职责链模式 命令模式 备忘录模式 中介者模式 访问者模式 解释器模式">
+<meta name="keywords" content="JavaScript,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS设计模式-原型模式&amp;桥接模式">
+<meta property="og:url" content="http://www.linxiaodongblog.com/2019/03/19/JS设计模式-原型模式&桥接模式/index.html">
 <meta property="og:site_name" content="林小东的个人博客">
-<meta property="og:description" content="技术与生活的学习，分享。">
+<meta property="og:description" content="本章内容介绍前端不常用的设计模式有哪些设计模式？  创建性模式原型模式 结构型模式桥接模式  组合模式  享元模式 行为型模式策略模式 模板方法模式 职责链模式 命令模式 备忘录模式 中介者模式 访问者模式 解释器模式">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-348db8e67e6d3e59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-647a6d9b8d406fe8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-19T15:10:24.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="林小东的个人博客">
-<meta name="twitter:description" content="技术与生活的学习，分享。">
+<meta name="twitter:title" content="JS设计模式-原型模式&amp;桥接模式">
+<meta name="twitter:description" content="本章内容介绍前端不常用的设计模式有哪些设计模式？  创建性模式原型模式 结构型模式桥接模式  组合模式  享元模式 行为型模式策略模式 模板方法模式 职责链模式 命令模式 备忘录模式 中介者模式 访问者模式 解释器模式">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8878633-348db8e67e6d3e59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="林小东的个人博客" type="application/atom+xml">
   
@@ -177,36 +182,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JS设计模式-原型模式&amp;桥接模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS设计模式-原型模式&amp;桥接模式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/19/JS设计模式-原型模式&桥接模式/" class="archive-article-date">
+
+        
+        <a href="/2019/03/19/JS设计模式-原型模式&桥接模式/" class="archive-article-date">
   	<time datetime="2019-03-19T14:35:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/19/JS设计模式-原型模式&桥接模式/">JS设计模式-原型模式&amp;桥接模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本章内容介绍前端不常用的设计模式<br>有哪些设计模式？</p>
+<ol>
+<li>创建性模式<br>原型模式</li>
+<li>结构型模式<br>桥接模式  组合模式  享元模式</li>
+<li>行为型模式<br>策略模式 模板方法模式 职责链模式 命令模式 备忘录模式 中介者模式 访问者模式 解释器模式<a id="more"></a>
+<h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5>clone自己，生成一个新对象<br>java默认有clone接口，不用自己实现。<h5 id="JS中的应用-Object-create"><a href="#JS中的应用-Object-create" class="headerlink" title="JS中的应用 Object.create()"></a>JS中的应用 Object.create()</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一个原型 对象</span></span><br><span class="line"><span class="keyword">let</span> prototype = &#123;</span><br><span class="line">    getName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.first + <span class="string">" "</span> + <span class="keyword">this</span>.last;</span><br><span class="line">    &#125;,</span><br><span class="line">    say: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(<span class="string">"hello"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 基于原型创建x</span></span><br><span class="line"><span class="keyword">let</span> x = <span class="built_in">Object</span>.create(prototype);</span><br><span class="line">x.first = <span class="string">"A"</span>;</span><br><span class="line">x.last = <span class="string">"B"</span>;</span><br><span class="line">alert(x.getName());</span><br><span class="line">x.say();</span><br><span class="line"><span class="comment">// 基于原型创建y</span></span><br><span class="line"><span class="keyword">let</span> y = <span class="built_in">Object</span>.create(prototype);</span><br><span class="line">y.first = <span class="string">"C"</span>;</span><br><span class="line">y.last = <span class="string">"D"</span>;</span><br><span class="line">alert(y.getName());</span><br><span class="line">y.say();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="对比JS中的原型prototype"><a href="#对比JS中的原型prototype" class="headerlink" title="对比JS中的原型prototype"></a>对比JS中的原型prototype</h5><ul>
+<li>prototype 可以理解为ES6 class 的一种底层原理实现</li>
+<li>而class是实现面向对象的基础，并不是服务于某个模式</li>
+<li>若干年后ED6全面普及，大家可能会忽略掉prototype</li>
+<li>但是Object.create却会长久存在</li>
+</ul>
+<h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><h5 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h5><ul>
+<li>用于把抽象化与实现化解耦</li>
+<li>使得二中可以独立变化<br>-（未找到JS中的经典应用）<h5 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h5>比如我们要画这样一幅图<br><img src="https://upload-images.jianshu.io/upload_images/8878633-348db8e67e6d3e59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>黄色圆圈  红色圆圈  黄色三角 红色三角 这样四个图形<br>代码实现如果混合在一起一般是这个样子的<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorShape</span> </span>&#123;</span><br><span class="line">    yellowCircle() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"yellow circle"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    redCircle() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"red circle"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    yellowTriangle() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"yellow triangle"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    redTriangle() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"red triangle"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">let</span> cs = <span class="keyword">new</span> ColorShape();</span><br><span class="line">cs.yellowCircle()</span><br><span class="line">cs.redCircle()</span><br><span class="line">cs.yellowTriangle()</span><br><span class="line">cs.redTriangle()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>但是从前端模式来说，我们一般是分离开的，大概是这样的<br><img src="https://upload-images.jianshu.io/upload_images/8878633-647a6d9b8d406fe8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>画图是画图，填充颜色是填充颜色，比较适合一些复杂性比较大的业务。<br>代码实现是这个样子的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Color</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name)&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name, color)&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line">    draw()&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.color.name&#125;</span> <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> red = <span class="keyword">new</span> Color(<span class="string">"red"</span>);</span><br><span class="line"><span class="keyword">let</span> yellow = <span class="keyword">new</span> Color(<span class="string">"yellow"</span>);</span><br><span class="line"><span class="keyword">let</span> circle = <span class="keyword">new</span> Shape(<span class="string">"circle"</span>, red);</span><br><span class="line">circle.draw();</span><br><span class="line"><span class="keyword">let</span> triangle = <span class="keyword">new</span> Shape(<span class="string">"triangle"</span>, yellow);</span><br><span class="line">triangle.draw();</span><br></pre></td></tr></table></figure></p>
+<h5 id="设计原则验证"><a href="#设计原则验证" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><ul>
+<li>抽象和实现分离</li>
+<li>符合开放封闭原则</li>
+</ul>
+<blockquote>
+<p>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程</p>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,399 +278,146 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.linxiaodongblog.com/2019/03/19/JS设计模式-原型模式&桥接模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/17/JS设计模式-状态模式/" class="archive-article-date">
-  	<time datetime="2019-03-17T13:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/17/JS设计模式-状态模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS设计模式-状态模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/17/JS设计模式-状态模式/">JS设计模式-状态模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原型模式"><span class="toc-number">1.</span> <span class="toc-text">原型模式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#概念"><span class="toc-number">1.0.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JS中的应用-Object-create"><span class="toc-number">1.0.2.</span> <span class="toc-text">JS中的应用 Object.create()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#对比JS中的原型prototype"><span class="toc-number">1.0.3.</span> <span class="toc-text">对比JS中的原型prototype</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#桥接模式"><span class="toc-number">2.</span> <span class="toc-text">桥接模式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#概念-1"><span class="toc-number">2.0.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#demo"><span class="toc-number">2.0.2.</span> <span class="toc-text">demo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证"><span class="toc-number">2.0.3.</span> <span class="toc-text">设计原则验证</span></a></li></ol></li>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/JS设计模式-迭代器模式/" class="archive-article-date">
-  	<time datetime="2019-03-16T06:27:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/JS设计模式-迭代器模式/">JS设计模式-迭代器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/JS设计模式-观察者模式/" class="archive-article-date">
-  	<time datetime="2019-03-12T15:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/JS设计模式-观察者模式/">JS设计模式-观察者模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/JS设计模式-外观模式/" class="archive-article-date">
-  	<time datetime="2019-03-12T14:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/JS设计模式-外观模式/">JS设计模式-外观模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/JS设计模式-代理模式/" class="archive-article-date">
-  	<time datetime="2019-03-09T13:40:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/JS设计模式-代理模式/">JS设计模式-代理模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/JS设计模式-装饰器模式/" class="archive-article-date">
-  	<time datetime="2019-03-07T15:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/JS设计模式-装饰器模式/">JS设计模式-装饰器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/05/JS设计模式-适配器模式/" class="archive-article-date">
-  	<time datetime="2019-03-05T14:44:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/05/JS设计模式-适配器模式/">JS设计模式-适配器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/JS设计模式-工厂模式/" class="archive-article-date">
-  	<time datetime="2019-03-02T02:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/JS设计模式-工厂模式/">JS设计模式-工厂模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/02/JS设计模式-单列模式/" class="archive-article-date">
-  	<time datetime="2019-03-02T01:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/02/JS设计模式-单列模式/">JS设计模式-单列模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+        
+    </div>
+</aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rNsRWYcIGxckKmmPknA380dN-gzGzoHsz",
+            app_key: "W1LqkNXMW9xoD4pf03j0rEva",
+            placeholder: "ヾﾉ≧∀≦)d输入评论内容!",
+            avatar:""
+        });
+    }
+</script>
+    </section>
+  
           </div>
         </div>
       </div>
@@ -635,9 +438,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
