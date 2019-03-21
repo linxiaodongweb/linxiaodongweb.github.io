@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-19T15:15:28.816Z</updated>
+  <updated>2019-03-21T03:01:57.891Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://www.linxiaodongblog.com/2019/03/19/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%961-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/19/JS设计模式-其他1-原型模式 &amp; 桥接模式/</id>
     <published>2019-03-19T14:35:51.000Z</published>
-    <updated>2019-03-19T15:15:28.816Z</updated>
+    <updated>2019-03-21T03:01:57.891Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本章内容介绍前端不常用的设计模式&lt;br&gt;有哪些设计模式？&lt;/p&gt;
+      &lt;p&gt;其他设计模式系列开始介绍前端不常用的设计模式&lt;br&gt;有哪些设计模式？&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;创建性模式&lt;br&gt;原型模式&lt;/li&gt;
 &lt;li&gt;结构型模式&lt;br&gt;桥接模式  组合模式  享元模式&lt;/li&gt;
