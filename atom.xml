@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-21T03:01:57.891Z</updated>
+  <updated>2019-03-25T01:53:30.893Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS设计模式-其他4-</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%964-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%20&amp;%20%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他4-命令模式 &amp; 备忘录模式/</id>
+    <published>2019-03-25T01:52:52.000Z</published>
+    <updated>2019-03-25T01:53:30.893Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;命令模式&quot;&gt;&lt;a href=&quot;#命令模式&quot; class=&quot;headerlink&quot; title=&quot;命令模式&quot;&gt;&lt;/a&gt;命令模式&lt;/h3&gt;&lt;h5 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;执行命令时，发布者和执行者分开&lt;/li&gt;
+&lt;li&gt;中间加入命令对象，作为中转站
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
+    
+      <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS设计模式-其他3-</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%963-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%20&amp;%20%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式/</id>
+    <published>2019-03-25T01:50:46.000Z</published>
+    <updated>2019-03-25T01:51:23.526Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;策略模式&quot;&gt;&lt;a href=&quot;#策略模式&quot; class=&quot;headerlink&quot; title=&quot;策略模式&quot;&gt;&lt;/a&gt;策略模式&lt;/h3&gt;&lt;h5 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;不同策略分开处理&lt;/li&gt;
+&lt;li&gt;避免出现大量 if…else 或者 switch…case
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
+    
+      <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS设计模式-其他2-组合模式</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%962-%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%20&amp;%20%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他2-组合模式 &amp; 享元模式/</id>
+    <published>2019-03-25T01:49:35.000Z</published>
+    <updated>2019-03-25T01:50:29.907Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;组合模式&quot;&gt;&lt;a href=&quot;#组合模式&quot; class=&quot;headerlink&quot; title=&quot;组合模式&quot;&gt;&lt;/a&gt;组合模式&lt;/h3&gt;&lt;h5 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;生成树形结构，表示 “整体-部分”&lt;/li&gt;
+&lt;li&gt;让整体和部分都具有一致的操作方式&lt;br&gt;例如文件夹目录
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
+    
+      <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML标签-块元素</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/21/HTML-%E5%9D%97%E5%85%83%E7%B4%A0/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/21/HTML-块元素/</id>
+    <published>2019-03-21T12:32:42.000Z</published>
+    <updated>2019-03-21T12:39:53.440Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JS设计模式-其他1-原型模式 &amp; 桥接模式</title>

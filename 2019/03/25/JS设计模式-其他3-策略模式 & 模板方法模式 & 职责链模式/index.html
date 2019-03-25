@@ -6,23 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.linxiaodongblog.com">
-  <title>JS设计模式-外观模式 | 林小东的个人博客</title>
+  <title>JS设计模式-其他3- | 林小东的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是外观模式 本段内容来自于 JAdam博客    有些人可能炒过股票，但其实大部分人都不太懂，这种没有足够了解证券知识的情况下做股票是很容易亏钱的，刚开始炒股肯定都会想，如果有个懂行的帮帮手就好，其实基金就是个好帮手，支付宝里就有许多的基金，它将投资者分散的资金集中起来，交由专业的经理人进行管理，投资于股票、债券、外汇等领域，而基金投资的收益归持有者所有，管理机构收取一定比例的托管管理费用。">
+  <meta name="description" content="策略模式概念 不同策略分开处理 避免出现大量 if…else 或者 switch…case">
 <meta name="keywords" content="JavaScript,设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS设计模式-外观模式">
-<meta property="og:url" content="http://www.linxiaodongblog.com/2019/03/12/JS设计模式-外观模式/index.html">
+<meta property="og:title" content="JS设计模式-其他3-">
+<meta property="og:url" content="http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他3-策略模式 & 模板方法模式 & 职责链模式/index.html">
 <meta property="og:site_name" content="林小东的个人博客">
-<meta property="og:description" content="什么是外观模式 本段内容来自于 JAdam博客    有些人可能炒过股票，但其实大部分人都不太懂，这种没有足够了解证券知识的情况下做股票是很容易亏钱的，刚开始炒股肯定都会想，如果有个懂行的帮帮手就好，其实基金就是个好帮手，支付宝里就有许多的基金，它将投资者分散的资金集中起来，交由专业的经理人进行管理，投资于股票、债券、外汇等领域，而基金投资的收益归持有者所有，管理机构收取一定比例的托管管理费用。">
+<meta property="og:description" content="策略模式概念 不同策略分开处理 避免出现大量 if…else 或者 switch…case">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-27105ebc7718f35f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-a7ebd17441bd7ccf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-03-13T08:22:43.690Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-06d55d2f3ea390a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-25T01:51:23.526Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS设计模式-外观模式">
-<meta name="twitter:description" content="什么是外观模式 本段内容来自于 JAdam博客    有些人可能炒过股票，但其实大部分人都不太懂，这种没有足够了解证券知识的情况下做股票是很容易亏钱的，刚开始炒股肯定都会想，如果有个懂行的帮帮手就好，其实基金就是个好帮手，支付宝里就有许多的基金，它将投资者分散的资金集中起来，交由专业的经理人进行管理，投资于股票、债券、外汇等领域，而基金投资的收益归持有者所有，管理机构收取一定比例的托管管理费用。">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8878633-27105ebc7718f35f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="JS设计模式-其他3-">
+<meta name="twitter:description" content="策略模式概念 不同策略分开处理 避免出现大量 if…else 或者 switch…case">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8878633-06d55d2f3ea390a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="林小东的个人博客" type="application/atom+xml">
   
@@ -176,42 +175,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS设计模式-外观模式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS设计模式-外观模式
+      JS设计模式-其他3-
     </h1>
   
 
         
-        <a href="/2019/03/12/JS设计模式-外观模式/" class="archive-article-date">
-  	<time datetime="2019-03-12T14:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+        <a href="/2019/03/25/JS设计模式-其他3-策略模式 & 模板方法模式 & 职责链模式/" class="archive-article-date">
+  	<time datetime="2019-03-25T01:50:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="什么是外观模式"><a href="#什么是外观模式" class="headerlink" title="什么是外观模式"></a>什么是外观模式</h5><blockquote>
-<p>本段内容来自于 <a href="https://www.cnblogs.com/adamjwh/p/9048594.html" target="_blank" rel="noopener">JAdam博客</a></p>
-</blockquote>
-<p>  有些人可能炒过股票，但其实大部分人都不太懂，这种没有足够了解证券知识的情况下做股票是很容易亏钱的，刚开始炒股肯定都会想，如果有个懂行的帮帮手就好，其实基金就是个好帮手，支付宝里就有许多的基金，它将投资者分散的资金集中起来，交由专业的经理人进行管理，投资于股票、债券、外汇等领域，而基金投资的收益归持有者所有，管理机构收取一定比例的托管管理费用。</p>
-  <a id="more"></a>    
-<p>　　其实本篇要说的这个设计模式就和这很有关系，由于当投资者自己买股票时，由于众多投资者对众多股票的联系太多，反而不利于操作，这在软件中就成为耦合性太高，而有了基金后，就变成众多用户只和基金打交道，关心基金的上涨和下跌，而实际上的操作确是基金经理人与股票和其它投资产品打交道，这就是外观模式。</p>
-<h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><ul>
-<li>为子系统中的一组接口提供了一个高级接口</li>
-<li>使用者使用这个高级接口<br>看完后应该有一点印象，在看看这张图片就理解了<br><img src="https://upload-images.jianshu.io/upload_images/8878633-27105ebc7718f35f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="外观模式.png"><br>如果没有这个高级接口，我们的代码链接可能很混乱难维护。<br>外观模式在结合业务的场景中很常用。<h5 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h5><img src="https://upload-images.jianshu.io/upload_images/8878633-a7ebd17441bd7ccf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="uml_facade.png"><h5 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h5>下面的列子就是一种简单的外观模式<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindEvent</span>(<span class="params">elem, type, selector, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( fn == <span class="literal">null</span>) &#123;</span><br><span class="line">    fn = selector</span><br><span class="line">    selector = <span class="literal">null</span></span><br><span class="line">  &#125;  </span><br><span class="line">  <span class="comment">// *****</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  调用</span></span><br><span class="line">bindEvent(elem, <span class="string">'click'</span>, <span class="string">'#div1'</span>, fn)</span><br><span class="line">bindEvent(elem, <span class="string">'click'</span>, fn)</span><br></pre></td></tr></table></figure>
+        <h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><ul>
+<li>不同策略分开处理</li>
+<li>避免出现大量 if…else 或者 switch…case<a id="more"></a>
 </li>
 </ul>
-<h5 id="设计原则验证"><a href="#设计原则验证" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><p>不符合单一职责原则和开放封闭原则，因此要注意谨慎使用，不可滥用</p>
+<h5 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h5><p>未使用策略模式的时候代码是这个样子的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> (type) &#123;</span><br><span class="line">        <span class="keyword">this</span>.type = type;</span><br><span class="line">    &#125;</span><br><span class="line">    buy() &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.type === <span class="string">"ordinary"</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"普通用户购买"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">this</span>.type === <span class="string">"member"</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"会员用户购买"</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">this</span>.type === <span class="string">"VIP"</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"VIP用户购买"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> u1 = <span class="keyword">new</span> User(<span class="string">'ordinary'</span>)</span><br><span class="line">u1.buy()</span><br><span class="line"><span class="keyword">let</span> u2 = <span class="keyword">new</span> User(<span class="string">'member'</span>)</span><br><span class="line">u1.buy()</span><br><span class="line"><span class="keyword">let</span> u3 = <span class="keyword">new</span> User(<span class="string">'VIP'</span>)</span><br><span class="line">u1.buy()</span><br></pre></td></tr></table></figure></p>
+<p>使用策略模式的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OridnaryUser</span> </span>&#123;</span><br><span class="line">    buy() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"普通用户购买"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MemberUser</span> </span>&#123;</span><br><span class="line">    buy() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"会员用户购买"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VipUser</span> </span>&#123;</span><br><span class="line">    buy() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"VIP用户购买"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> u1 = <span class="keyword">new</span> OridnaryUser();</span><br><span class="line"><span class="keyword">let</span> u2 = <span class="keyword">new</span> MemberUser();</span><br><span class="line"><span class="keyword">let</span> u3 = <span class="keyword">new</span> VipUser();</span><br></pre></td></tr></table></figure></p>
+<h5 id="设计原则验证"><a href="#设计原则验证" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><ul>
+<li>不同策略，分开处理，而不是混合在一起</li>
+<li>符合开放封闭原则</li>
+</ul>
+<h3 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h3><h5 id="什么是模板方法？"><a href="#什么是模板方法？" class="headerlink" title="什么是模板方法？"></a>什么是模板方法？</h5><p>一个方法代码太多，我们可以拆分开来，或者组合其他的方法一起执行<br>可以通过一个方法，对自己内部的一些相关顺序执行方法进行一个合并，对外输出一个统一的方法。<br>简单用代码演示<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Action</span> </span>&#123;</span><br><span class="line">    handle() &#123;</span><br><span class="line">        handle1();</span><br><span class="line">        handle2();</span><br><span class="line">        handle3();</span><br><span class="line">    &#125;</span><br><span class="line">    handle1() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    handle2() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    handle3() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="职责链模式"><a href="#职责链模式" class="headerlink" title="职责链模式"></a>职责链模式</h3><h5 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h5><ul>
+<li>异步操作可能分为多个职责角色来完成</li>
+<li>把这些角色都分开，然后用一个链串起来</li>
+<li>将发起者和各个处理者进行隔离<h5 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h5>比如你需要请假，需要各个审批，一级一级的审批，代码如下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Action</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.nextAction = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    setNextAction(action) &#123;</span><br><span class="line">        <span class="keyword">this</span>.nextAction = action;</span><br><span class="line">    &#125;</span><br><span class="line">    handle() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span> 审批`</span>)</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.nextAction !== <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">this</span>.nextAction.handle();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">let</span> a1 = <span class="keyword">new</span> Action(<span class="string">"组长"</span>);</span><br><span class="line"><span class="keyword">let</span> a2 = <span class="keyword">new</span> Action(<span class="string">"经理"</span>);</span><br><span class="line"><span class="keyword">let</span> a3 = <span class="keyword">new</span> Action(<span class="string">"总监"</span>);</span><br><span class="line">a1.setNextAction(a2);</span><br><span class="line">a2.setNextAction(a3);</span><br><span class="line">a1.handle();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>运行结果<br><img src="https://upload-images.jianshu.io/upload_images/8878633-06d55d2f3ea390a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行结果.png"></p>
+<h5 id="JS中的链式操作"><a href="#JS中的链式操作" class="headerlink" title="JS中的链式操作"></a>JS中的链式操作</h5><ul>
+<li>职责链模式和业务结合较多，JS中能够联想到链式操作</li>
+<li>Jquery的链式操作， Promise.then的链式操作</li>
+</ul>
+<h5 id="设计原则验证-1"><a href="#设计原则验证-1" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><ul>
+<li>发起者于各个处理者进行隔离</li>
+<li>符合开放封闭原则</li>
+</ul>
 <blockquote>
-<ol>
-<li>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程。</li>
-</ol>
+<p>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程</p>
 </blockquote>
 
       
@@ -312,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.linxiaodongblog.com/2019/03/12/JS设计模式-外观模式/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他3-策略模式 & 模板方法模式 & 职责链模式/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +338,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/12/JS设计模式-观察者模式/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/25/JS设计模式-其他4-命令模式 & 备忘录模式/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JS设计模式-观察者模式
+          JS设计模式-其他4-
         
       </div>
     </a>
   
   
-    <a href="/2019/03/09/JS设计模式-代理模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS设计模式-代理模式</div>
+    <a href="/2019/03/25/JS设计模式-其他2-组合模式 & 享元模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS设计模式-其他2-组合模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -364,7 +376,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是外观模式"><span class="toc-number">1.</span> <span class="toc-text">什么是外观模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#介绍"><span class="toc-number">2.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML类图"><span class="toc-number">3.</span> <span class="toc-text">UML类图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#场景"><span class="toc-number">4.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证"><span class="toc-number">5.</span> <span class="toc-text">设计原则验证</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#策略模式"><span class="toc-number">1.</span> <span class="toc-text">策略模式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#概念"><span class="toc-number">1.0.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#演示"><span class="toc-number">1.0.2.</span> <span class="toc-text">演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证"><span class="toc-number">1.0.3.</span> <span class="toc-text">设计原则验证</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#模板方法模式"><span class="toc-number">2.</span> <span class="toc-text">模板方法模式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是模板方法？"><span class="toc-number">2.0.1.</span> <span class="toc-text">什么是模板方法？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#职责链模式"><span class="toc-number">3.</span> <span class="toc-text">职责链模式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#概念-1"><span class="toc-number">3.0.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#代码演示"><span class="toc-number">3.0.2.</span> <span class="toc-text">代码演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JS中的链式操作"><span class="toc-number">3.0.3.</span> <span class="toc-text">JS中的链式操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证-1"><span class="toc-number">3.0.4.</span> <span class="toc-text">设计原则验证</span></a></li></ol></li>
                     </div>
                 </span>
             </div>
