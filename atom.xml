@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-25T01:53:30.893Z</updated>
+  <updated>2019-03-25T01:57:13.890Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS设计模式-其他4-</title>
+    <title>JS设计模式-其他4-命令模式 &amp; 备忘录模式</title>
     <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%964-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%20&amp;%20%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他4-命令模式 &amp; 备忘录模式/</id>
     <published>2019-03-25T01:52:52.000Z</published>
-    <updated>2019-03-25T01:53:30.893Z</updated>
+    <updated>2019-03-25T01:57:13.890Z</updated>
     
     <summary type="html">
     
@@ -39,11 +39,11 @@
   </entry>
   
   <entry>
-    <title>JS设计模式-其他3-</title>
+    <title>JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式</title>
     <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%963-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%20&amp;%20%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式/</id>
     <published>2019-03-25T01:50:46.000Z</published>
-    <updated>2019-03-25T01:51:23.526Z</updated>
+    <updated>2019-03-25T01:57:19.841Z</updated>
     
     <summary type="html">
     
@@ -61,11 +61,11 @@
   </entry>
   
   <entry>
-    <title>JS设计模式-其他2-组合模式</title>
+    <title>JS设计模式-其他2-组合模式 &amp; 享元模式</title>
     <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%962-%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%20&amp;%20%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他2-组合模式 &amp; 享元模式/</id>
     <published>2019-03-25T01:49:35.000Z</published>
-    <updated>2019-03-25T01:50:29.907Z</updated>
+    <updated>2019-03-25T01:57:39.123Z</updated>
     
     <summary type="html">
     
