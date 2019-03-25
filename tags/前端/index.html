@@ -6,22 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.linxiaodongblog.com">
-  <title>JS设计模式-状态模式 | 林小东的个人博客</title>
+  <title>Tag: 前端 | 林小东的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介绍 一个对象有状态变化 每次状态变化都会触发一个逻辑 不能总是使用if…else来控制eg: 红绿灯  收藏/未收藏核心： 状态和主体分离">
-<meta name="keywords" content="设计模式,前端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JS设计模式-状态模式">
-<meta property="og:url" content="http://www.linxiaodongblog.com/2019/03/17/JS设计模式-状态模式/index.html">
+  <meta name="description" content="技术与生活的学习，分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="林小东的个人博客">
+<meta property="og:url" content="http://www.linxiaodongblog.com/tags/前端/index.html">
 <meta property="og:site_name" content="林小东的个人博客">
-<meta property="og:description" content="介绍 一个对象有状态变化 每次状态变化都会触发一个逻辑 不能总是使用if…else来控制eg: 红绿灯  收藏/未收藏核心： 状态和主体分离">
+<meta property="og:description" content="技术与生活的学习，分享。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8878633-c93c9d1ec571c90e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-03-25T02:05:35.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS设计模式-状态模式">
-<meta name="twitter:description" content="介绍 一个对象有状态变化 每次状态变化都会触发一个逻辑 不能总是使用if…else来控制eg: 红绿灯  收藏/未收藏核心： 状态和主体分离">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8878633-c93c9d1ec571c90e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="林小东的个人博客">
+<meta name="twitter:description" content="技术与生活的学习，分享。">
   
     <link rel="alternative" href="/atom.xml" title="林小东的个人博客" type="application/atom+xml">
   
@@ -175,89 +171,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS设计模式-状态模式" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JS设计模式-状态模式
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/25/HTML-块元素/" class="archive-article-date">
+  	<time datetime="2019-03-25T12:32:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-25</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/25/HTML-块元素/">HTML标签-块元素</a>
     </h1>
   
 
-        
-        <a href="/2019/03/17/JS设计模式-状态模式/" class="archive-article-date">
-  	<time datetime="2019-03-17T13:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><ul>
-<li>一个对象有状态变化</li>
-<li>每次状态变化都会触发一个逻辑</li>
-<li>不能总是使用if…else来控制<br>eg: 红绿灯  收藏/未收藏<br>核心： 状态和主体分离<a id="more"></a>    
-<h5 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h5><img src="https://upload-images.jianshu.io/upload_images/8878633-c93c9d1ec571c90e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="uml_状态模式类图.png"></li>
-</ul>
-<h5 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">State</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(color) &#123;</span><br><span class="line">        <span class="keyword">this</span>.color = color</span><br><span class="line">    &#125;</span><br><span class="line">    handle(context) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`turn to <span class="subst">$&#123;<span class="keyword">this</span>.color&#125;</span> light`</span>)</span><br><span class="line">        context.setState(<span class="keyword">this</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Context</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">this</span>.state = <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">    setState(state) &#123;</span><br><span class="line">        <span class="keyword">this</span>.state = state</span><br><span class="line">    &#125;</span><br><span class="line">    getState() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.state</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试代码</span></span><br><span class="line"><span class="keyword">let</span> context = <span class="keyword">new</span> Context()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> greed = <span class="keyword">new</span> State(<span class="string">'greed'</span>)</span><br><span class="line"><span class="keyword">let</span> yellow = <span class="keyword">new</span> State(<span class="string">'yellow'</span>)</span><br><span class="line"><span class="keyword">let</span> red = <span class="keyword">new</span> State(<span class="string">'red'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 绿灯亮了</span></span><br><span class="line">greed.handle(context)</span><br><span class="line"><span class="built_in">console</span>.log(context.getState())</span><br><span class="line"><span class="comment">// 黄灯亮了</span></span><br><span class="line">yellow.handle(context)</span><br><span class="line"><span class="built_in">console</span>.log(context.getState())</span><br><span class="line"><span class="comment">// 红灯亮了</span></span><br><span class="line">red.handle(context)</span><br><span class="line"><span class="built_in">console</span>.log(context.getState())</span><br></pre></td></tr></table></figure>
-<h5 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h5><ul>
-<li>有限状态机</li>
-<li>写一个简单的Promise<h6 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h6></li>
-<li>有限个状态，以及在这些状态间的变化</li>
-<li>如交通信号灯</li>
-<li>使用开源lib :<a href="https://github.com/jakesgordon/javascript-state-machine" target="_blank" rel="noopener">javascript-state-machine</a><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>有限状态机<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./03-javascript-state-machine.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 状态机模型</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> fsm = <span class="keyword">new</span> StateMachine(&#123;</span></span><br><span class="line"><span class="javascript">            init: <span class="string">'收藏'</span>,  <span class="comment">// 初始状态，待收藏</span></span></span><br><span class="line"><span class="undefined">            transitions: [</span></span><br><span class="line"><span class="undefined">                &#123;</span></span><br><span class="line"><span class="javascript">                    name: <span class="string">'doStore'</span>, </span></span><br><span class="line"><span class="javascript">                    <span class="keyword">from</span>: <span class="string">'收藏'</span>,</span></span><br><span class="line"><span class="javascript">                    to: <span class="string">'取消收藏'</span></span></span><br><span class="line"><span class="undefined">                &#125;,</span></span><br><span class="line"><span class="undefined">                &#123;</span></span><br><span class="line"><span class="javascript">                    name: <span class="string">'deleteStore'</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">from</span>: <span class="string">'取消收藏'</span>,</span></span><br><span class="line"><span class="javascript">                    to: <span class="string">'收藏'</span></span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            ],</span></span><br><span class="line"><span class="undefined">            methods: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 执行收藏</span></span></span><br><span class="line"><span class="javascript">                onDoStore: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    alert(<span class="string">'收藏成功'</span>)</span></span><br><span class="line"><span class="undefined">                    updateText()</span></span><br><span class="line"><span class="undefined">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 取消收藏</span></span></span><br><span class="line"><span class="javascript">                onDeleteStore: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    alert(<span class="string">'已取消收藏'</span>)</span></span><br><span class="line"><span class="undefined">                    updateText()</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> $btn = $(<span class="string">'#btn'</span>)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 点击事件</span></span></span><br><span class="line"><span class="javascript">        $btn.click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (fsm.is(<span class="string">'收藏'</span>)) &#123;</span></span><br><span class="line"><span class="undefined">                fsm.doStore(1)</span></span><br><span class="line"><span class="javascript">            &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="undefined">                fsm.deleteStore()</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 更新文案</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">updateText</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            $btn.text(fsm.state)</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 初始化文案</span></span></span><br><span class="line"><span class="undefined">        updateText()</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h6 id="写一个Promise"><a href="#写一个Promise" class="headerlink" title="写一个Promise"></a>写一个Promise</h6><p>Promise 三个状态</p>
-<ul>
-<li>pending 准备</li>
-<li>fullfilled 成功 （执行resolve)</li>
-<li>rejected 失败</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./03-javascript-state-machine.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 模型</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> fsm = <span class="keyword">new</span> StateMachine(&#123;</span></span><br><span class="line"><span class="javascript">            init: <span class="string">'pending'</span>,</span></span><br><span class="line"><span class="undefined">            transitions: [</span></span><br><span class="line"><span class="undefined">                &#123;</span></span><br><span class="line"><span class="javascript">                    name: <span class="string">'resolve'</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">from</span>: <span class="string">'pending'</span>,</span></span><br><span class="line"><span class="javascript">                    to: <span class="string">'fullfilled'</span></span></span><br><span class="line"><span class="undefined">                &#125;,</span></span><br><span class="line"><span class="undefined">                &#123;</span></span><br><span class="line"><span class="javascript">                    name: <span class="string">'reject'</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">from</span>: <span class="string">'pending'</span>,</span></span><br><span class="line"><span class="javascript">                    to: <span class="string">'rejected'</span></span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            ],</span></span><br><span class="line"><span class="undefined">            methods: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 成功</span></span></span><br><span class="line"><span class="javascript">                onResolve: <span class="function"><span class="keyword">function</span> (<span class="params">state, data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 参数：state - 当前状态示例; data - fsm.resolve(xxx) 执行时传递过来的参数</span></span></span><br><span class="line"><span class="javascript">                    data.successList.forEach(<span class="function"><span class="params">fn</span> =&gt;</span> fn())</span></span><br><span class="line"><span class="undefined">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 失败</span></span></span><br><span class="line"><span class="javascript">                onReject: <span class="function"><span class="keyword">function</span> (<span class="params">state, data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 参数：state - 当前状态示例; data - fsm.reject(xxx) 执行时传递过来的参数</span></span></span><br><span class="line"><span class="javascript">                    data.failList.forEach(<span class="function"><span class="params">fn</span> =&gt;</span> fn())</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 定义 Promise</span></span></span><br><span class="line"><span class="javascript">        <span class="class"><span class="keyword">class</span> <span class="title">MyPromise</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">constructor</span>(fn) &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">this</span>.successList = []</span></span><br><span class="line"><span class="javascript">                <span class="keyword">this</span>.failList = []</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                fn(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// resolve 函数</span></span></span><br><span class="line"><span class="javascript">                    fsm.resolve(<span class="keyword">this</span>)</span></span><br><span class="line"><span class="undefined">                &#125;, () =&gt; &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// reject 函数</span></span></span><br><span class="line"><span class="javascript">                    fsm.reject(<span class="keyword">this</span>)</span></span><br><span class="line"><span class="undefined">                &#125;)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">            then(successFn, failFn) &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">this</span>.successList.push(successFn)</span></span><br><span class="line"><span class="javascript">                <span class="keyword">this</span>.failList.push(failFn)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 测试代码</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">src</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">const</span> promise = <span class="keyword">new</span> MyPromise(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>)</span></span><br><span class="line"><span class="javascript">                img.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">                    resolve(img)</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="javascript">                img.onerror = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">                    reject()</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">                img.src = src</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> promise</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> src = <span class="string">'http://www.imooc.com/static/img/index/logo_new.png'</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> result = loadImg(src)</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(result)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        result.then(<span class="function"><span class="keyword">function</span> (<span class="params">img</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'success 1'</span>)</span></span><br><span class="line"><span class="javascript">        &#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    </span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'failed 1'</span>)</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="javascript">        result.then(<span class="function"><span class="keyword">function</span> (<span class="params">img</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'success 2'</span>)</span></span><br><span class="line"><span class="javascript">        &#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    </span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'failed 2'</span>)</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h5 id="设计原则验证"><a href="#设计原则验证" class="headerlink" title="设计原则验证"></a>设计原则验证</h5><ul>
-<li>将状态对象和主题对象分离，状态的变化逻辑单独处理</li>
-<li>符合开放封闭原则</li>
-</ul>
-<blockquote>
-<p>本文资料来自慕课网-双越老师-Javascript 设计模式系统讲解与应用视频课程</p>
-</blockquote>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/wechatpay.jpeg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/23/JS设计模式-其他4-命令模式 & 备忘录模式/" class="archive-article-date">
+  	<time datetime="2019-03-23T01:52:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/23/JS设计模式-其他4-命令模式 & 备忘录模式/">JS设计模式-其他4-命令模式 &amp; 备忘录模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -273,155 +258,361 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.linxiaodongblog.com/2019/03/17/JS设计模式-状态模式/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2019/03/17/JS设计模式-其他1-原型模式 & 桥接模式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JS设计模式-其他1-原型模式 &amp; 桥接模式
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/03/16/JS设计模式-迭代器模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS设计模式-迭代器模式</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/21/JS设计模式-其他3-策略模式 & 模板方法模式 & 职责链模式/" class="archive-article-date">
+  	<time datetime="2019-03-21T01:50:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-21</time>
+</a>
         </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UML类图"><span class="toc-number">2.</span> <span class="toc-text">UML类图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#代码演示"><span class="toc-number">3.</span> <span class="toc-text">代码演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#场景"><span class="toc-number">4.</span> <span class="toc-text">场景</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#有限状态机"><span class="toc-number">4.1.</span> <span class="toc-text">有限状态机</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#写一个Promise"><span class="toc-number">4.2.</span> <span class="toc-text">写一个Promise</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设计原则验证"><span class="toc-number">5.</span> <span class="toc-text">设计原则验证</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/21/JS设计模式-其他3-策略模式 & 模板方法模式 & 职责链模式/">JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
         </div>
-        
-    </div>
-</aside>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/19/JS设计模式-其他2-组合模式 & 享元模式/" class="archive-article-date">
+  	<time datetime="2019-03-19T01:49:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-19</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/19/JS设计模式-其他2-组合模式 & 享元模式/">JS设计模式-其他2-组合模式 &amp; 享元模式</a>
+    </h1>
+  
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
+          
 
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/17/JS设计模式-其他1-原型模式 & 桥接模式/" class="archive-article-date">
+  	<time datetime="2019-03-17T14:35:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/17/JS设计模式-其他1-原型模式 & 桥接模式/">JS设计模式-其他1-原型模式 &amp; 桥接模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/17/JS设计模式-状态模式/" class="archive-article-date">
+  	<time datetime="2019-03-17T13:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/17/JS设计模式-状态模式/">JS设计模式-状态模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/16/JS设计模式-迭代器模式/" class="archive-article-date">
+  	<time datetime="2019-03-16T06:27:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/16/JS设计模式-迭代器模式/">JS设计模式-迭代器模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/12/JS设计模式-观察者模式/" class="archive-article-date">
+  	<time datetime="2019-03-12T15:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/12/JS设计模式-观察者模式/">JS设计模式-观察者模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/12/JS设计模式-外观模式/" class="archive-article-date">
+  	<time datetime="2019-03-12T14:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/12/JS设计模式-外观模式/">JS设计模式-外观模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/09/JS设计模式-代理模式/" class="archive-article-date">
+  	<time datetime="2019-03-09T13:40:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/09/JS设计模式-代理模式/">JS设计模式-代理模式</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
   
+    </div></section>
   
 
+    
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/前端/page/2/">2</a><a class="extend next" rel="next" href="/tags/前端/page/2/">Next &raquo;</a>
+    </nav>
   
 
-  
 
-  
-
-
-  <section id="comments" class="comments">
-    <style>
-      .comments{margin:30px;padding:10px;background:#fff}
-      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-    </style>
-    <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'false' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "rNsRWYcIGxckKmmPknA380dN-gzGzoHsz",
-            app_key: "W1LqkNXMW9xoD4pf03j0rEva",
-            placeholder: "ヾﾉ≧∀≦)d输入评论内容!",
-            avatar:""
-        });
-    }
-</script>
-    </section>
-  
           </div>
         </div>
       </div>
@@ -442,9 +633,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

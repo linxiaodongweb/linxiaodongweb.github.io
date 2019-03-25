@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.linxiaodongblog.com/"/>
-  <updated>2019-03-25T01:57:13.890Z</updated>
+  <updated>2019-03-25T02:01:00.236Z</updated>
   <id>http://www.linxiaodongblog.com/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTML标签-块元素</title>
+    <link href="http://www.linxiaodongblog.com/2019/03/25/HTML-%E5%9D%97%E5%85%83%E7%B4%A0/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/25/HTML-块元素/</id>
+    <published>2019-03-25T12:32:42.000Z</published>
+    <updated>2019-03-25T02:01:00.236Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="HTML" scheme="http://www.linxiaodongblog.com/tags/HTML/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS设计模式-其他4-命令模式 &amp; 备忘录模式</title>
-    <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%964-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%20&amp;%20%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他4-命令模式 &amp; 备忘录模式/</id>
-    <published>2019-03-25T01:52:52.000Z</published>
-    <updated>2019-03-25T01:57:13.890Z</updated>
+    <link href="http://www.linxiaodongblog.com/2019/03/23/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%964-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%20&amp;%20%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/23/JS设计模式-其他4-命令模式 &amp; 备忘录模式/</id>
+    <published>2019-03-23T01:52:52.000Z</published>
+    <updated>2019-03-25T02:05:35.232Z</updated>
     
     <summary type="html">
     
@@ -32,18 +50,18 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式</title>
-    <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%963-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%20&amp;%20%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式/</id>
-    <published>2019-03-25T01:50:46.000Z</published>
-    <updated>2019-03-25T01:57:19.841Z</updated>
+    <link href="http://www.linxiaodongblog.com/2019/03/21/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%963-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%20&amp;%20%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/21/JS设计模式-其他3-策略模式 &amp; 模板方法模式 &amp; 职责链模式/</id>
+    <published>2019-03-21T01:50:46.000Z</published>
+    <updated>2019-03-25T02:05:35.232Z</updated>
     
     <summary type="html">
     
@@ -54,18 +72,18 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>JS设计模式-其他2-组合模式 &amp; 享元模式</title>
-    <link href="http://www.linxiaodongblog.com/2019/03/25/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%962-%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%20&amp;%20%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.linxiaodongblog.com/2019/03/25/JS设计模式-其他2-组合模式 &amp; 享元模式/</id>
-    <published>2019-03-25T01:49:35.000Z</published>
-    <updated>2019-03-25T01:57:39.123Z</updated>
+    <link href="http://www.linxiaodongblog.com/2019/03/19/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%962-%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%20&amp;%20%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/19/JS设计模式-其他2-组合模式 &amp; 享元模式/</id>
+    <published>2019-03-19T01:49:35.000Z</published>
+    <updated>2019-03-25T02:05:35.232Z</updated>
     
     <summary type="html">
     
@@ -76,32 +94,18 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-  </entry>
-  
-  <entry>
-    <title>HTML标签-块元素</title>
-    <link href="http://www.linxiaodongblog.com/2019/03/21/HTML-%E5%9D%97%E5%85%83%E7%B4%A0/"/>
-    <id>http://www.linxiaodongblog.com/2019/03/21/HTML-块元素/</id>
-    <published>2019-03-21T12:32:42.000Z</published>
-    <updated>2019-03-21T12:39:53.440Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>JS设计模式-其他1-原型模式 &amp; 桥接模式</title>
-    <link href="http://www.linxiaodongblog.com/2019/03/19/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%961-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.linxiaodongblog.com/2019/03/19/JS设计模式-其他1-原型模式 &amp; 桥接模式/</id>
-    <published>2019-03-19T14:35:51.000Z</published>
-    <updated>2019-03-21T03:01:57.891Z</updated>
+    <link href="http://www.linxiaodongblog.com/2019/03/17/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B6%E4%BB%961-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%20&amp;%20%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.linxiaodongblog.com/2019/03/17/JS设计模式-其他1-原型模式 &amp; 桥接模式/</id>
+    <published>2019-03-17T14:35:51.000Z</published>
+    <updated>2019-03-25T02:05:35.232Z</updated>
     
     <summary type="html">
     
@@ -114,9 +118,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -125,7 +129,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/17/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/17/JS设计模式-状态模式/</id>
     <published>2019-03-17T13:54:59.000Z</published>
-    <updated>2019-03-17T14:56:48.973Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -137,9 +141,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -148,7 +152,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/16/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/16/JS设计模式-迭代器模式/</id>
     <published>2019-03-16T06:27:21.000Z</published>
-    <updated>2019-03-16T07:37:52.840Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -159,9 +163,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -170,7 +174,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/12/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/12/JS设计模式-观察者模式/</id>
     <published>2019-03-12T15:11:01.000Z</published>
-    <updated>2019-03-16T06:41:37.380Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -182,9 +186,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -193,7 +197,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/12/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/12/JS设计模式-外观模式/</id>
     <published>2019-03-12T14:56:10.000Z</published>
-    <updated>2019-03-13T08:22:43.690Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -205,9 +209,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -216,7 +220,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/09/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/09/JS设计模式-代理模式/</id>
     <published>2019-03-09T13:40:13.000Z</published>
-    <updated>2019-03-09T14:36:54.850Z</updated>
+    <updated>2019-03-25T02:05:35.232Z</updated>
     
     <summary type="html">
     
@@ -229,9 +233,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -240,7 +244,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/07/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/07/JS设计模式-装饰器模式/</id>
     <published>2019-03-07T15:23:21.000Z</published>
-    <updated>2019-03-07T16:53:31.712Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -251,9 +255,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -262,7 +266,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/05/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/05/JS设计模式-适配器模式/</id>
     <published>2019-03-05T14:44:43.000Z</published>
-    <updated>2019-03-07T16:53:33.547Z</updated>
+    <updated>2019-03-25T02:05:36.944Z</updated>
     
     <summary type="html">
     
@@ -273,9 +277,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -284,7 +288,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/02/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/02/JS设计模式-工厂模式/</id>
     <published>2019-03-02T02:36:44.000Z</published>
-    <updated>2019-03-07T16:53:29.826Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -293,9 +297,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -304,7 +308,7 @@
     <link href="http://www.linxiaodongblog.com/2019/03/02/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E5%88%97%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.linxiaodongblog.com/2019/03/02/JS设计模式-单列模式/</id>
     <published>2019-03-02T01:44:02.000Z</published>
-    <updated>2019-03-07T16:53:27.727Z</updated>
+    <updated>2019-03-25T02:05:35.233Z</updated>
     
     <summary type="html">
     
@@ -316,9 +320,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://www.linxiaodongblog.com/tags/JavaScript/"/>
-    
       <category term="设计模式" scheme="http://www.linxiaodongblog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://www.linxiaodongblog.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
